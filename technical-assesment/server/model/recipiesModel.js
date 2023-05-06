@@ -9,7 +9,7 @@ const getAll = (callback) => {
     })
 }
 const getOne = (callback,name) => {
-  const sql=`SELECT * FROM recepie WHERE recepie_Name='${name}`
+  const sql=`SELECT * FROM recepie WHERE recepie_Name="${name}"`
   connection.query(sql,(err,rslt)=>{
     callback(err,rslt)
   })

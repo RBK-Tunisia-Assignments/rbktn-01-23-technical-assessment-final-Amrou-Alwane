@@ -22,7 +22,7 @@ const Onerecepie = ({e,updateRec,deleteRec}) => {
     recepie_Image:img,
     recepie_Description: description,
     recepie_Ingredients:ingredients,
-    users_user_Id: 1
+    users_user_Id: e.users_user_Id
     }
     const handleShow=()=>{
       setShow(!show)

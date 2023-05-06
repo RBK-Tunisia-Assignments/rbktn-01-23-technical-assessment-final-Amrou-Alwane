@@ -11,7 +11,7 @@ const Add = ({addRecapies}) => {
   const [description,setDescription]=useState("")
   const[ingredients,setIngredients]=useState("")
   const[img,setImg]=useState("")
-
+  const[id,setId]=useState("")
   const handleAdd=()=>{
     const rec={
     Cook_Time: cook,
@@ -22,7 +22,7 @@ const Add = ({addRecapies}) => {
     recepie_Image:img,
     recepie_Description: description,
     recepie_Ingredients:ingredients,
-    users_user_Id: 1
+    users_user_Id: id
     }
     addRecapies(rec)
   }
@@ -60,6 +60,10 @@ const Add = ({addRecapies}) => {
       <div className="form-group">
         <label>Image:</label>
         <input type="text" placeholder="Image URL" onChange={(e)=>setImg(e.target.value)} />
+      </div>
+      <div className="form-group">
+        <label>Id:</label>
+        <input type="text" placeholder="your id" onChange={(e)=>setId(e.target.value)} />
       </div>
       <button className="create-recipe-btn" onClick={handleAdd} >Create Recipe</button>
     </div>
