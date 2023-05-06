@@ -4,6 +4,7 @@ import "./App.css";
 import Home from "./components/Home.jsx";
 import AllRecepies from "./components/AllRecipies.jsx"
 import Add from "./components/Add.jsx"
+import Favourite from "./components/Favourite";
 import axios from 'axios'
 function App() {
 const [view,setView]=useState('Home')

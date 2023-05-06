@@ -74,7 +74,7 @@ CREATE TABLE IF NOT EXISTS `recepies`.`favourite` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
     FOREIGN KEY (`food_Id`)
-    REFERENCES `recepies`.`users` (`recepie_Id`)
+    REFERENCES `recepies`.`users`(`recepie_Id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 );
