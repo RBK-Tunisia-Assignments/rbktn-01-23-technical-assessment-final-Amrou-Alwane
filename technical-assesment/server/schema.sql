@@ -62,7 +62,22 @@ CREATE TABLE IF NOT EXISTS `recepies`.`recepie` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb3;
-
+-- -----------------------------------------------------
+-- Table `recepies`.`favourite`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `recepies`.`favourite` (
+  `favourite_Id` INT NOT NULL AUTO_INCREMENT,
+    `poster_Id`  INT NOT NULL,
+    `food_Id`INT NOT NULL
+   FOREIGN KEY (`poster_Id`)
+    REFERENCES `recepies`.`users`(`user_Id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+    FOREIGN KEY (`food_Id`)
+    REFERENCES `recepies`.`users` (`recepie_Id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION
+);
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
